@@ -1,6 +1,6 @@
 package by.htp.city;
 
-public class Book extends Literature implements StorableInCityLibrary {
+public class Book extends Literature {
 	
 	public Book(Author author, String title) {
 		super(author, title);

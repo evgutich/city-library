@@ -1,6 +1,6 @@
 package by.htp.city;
 
-public class Journalism extends Publication implements StorableInCityLibrary{
+public class Journalism extends Publication {
 	
 	protected String publishingHouse;
 	

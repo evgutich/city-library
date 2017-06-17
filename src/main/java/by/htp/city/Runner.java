@@ -4,8 +4,8 @@ import java.util.List;
 
 public class Runner {
 	
-	private static void printStorableInCityLibrary(List<StorableInCityLibrary> data){
-		for (StorableInCityLibrary storable : data){
+	private static void printStorableInCityLibrary(List<Publication> data){
+		for (Publication storable : data){
 			System.out.println(storable);
 		}
 		System.out.println();

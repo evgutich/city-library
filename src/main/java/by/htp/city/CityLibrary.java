@@ -3,13 +3,13 @@ package by.htp.city;
 import java.util.HashMap;
 
 public class CityLibrary {
-	private HashMap<StorableInCityLibrary, Integer> itemsInCityLibrary;
+	private HashMap<Publication, Integer> itemsInCityLibrary;
 
-	public HashMap<StorableInCityLibrary, Integer> getItemsInCityLibrary() {
+	public HashMap<Publication, Integer> getItemsInCityLibrary() {
 		return itemsInCityLibrary;
 	}
 
-	public void setItemsInCityLibrary(HashMap<StorableInCityLibrary, Integer> itemsInCityLibrary) {
+	public void setItemsInCityLibrary(HashMap<Publication, Integer> itemsInCityLibrary) {
 		this.itemsInCityLibrary = itemsInCityLibrary;
 	}
 

@@ -12,7 +12,7 @@ public class CityLibrarianBuilder {
 		Author author3 = new Author("Alexander", "Griboedov", LocalDate.of(1795, 1, 4));
 		Book book3 = new Book(author3, "Clever people also cry");
 		CityLibrary cityLibrary = new CityLibrary();
-		HashMap<StorableInCityLibrary, Integer> libraryStock = new HashMap<StorableInCityLibrary, Integer>();
+		HashMap<Publication, Integer> libraryStock = new HashMap<Publication, Integer>();
 		libraryStock.put(book, 1);
 		libraryStock.put(book2, 1);
 		libraryStock.put(book3, 1);

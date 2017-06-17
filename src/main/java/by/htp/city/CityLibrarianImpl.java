@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
-public class CityLibrarianImpl implements Librarian<StorableInCityLibrary> {
+public class CityLibrarianImpl implements Librarian<Publication> {
 	
 	private CityLibrary cityLibrary;
 	
@@ -12,15 +12,15 @@ public class CityLibrarianImpl implements Librarian<StorableInCityLibrary> {
 		this.cityLibrary = cityLibrary;
 	}
 	
-	public List<StorableInCityLibrary> viewAll() {
-		Set<StorableInCityLibrary> cityLibrarySet = cityLibrary.getItemsInCityLibrary().keySet();
-		return new ArrayList<StorableInCityLibrary>(cityLibrarySet);
+	public List<Publication> viewAll() {
+		Set<Publication> cityLibrarySet = cityLibrary.getItemsInCityLibrary().keySet();
+		return new ArrayList<Publication>(cityLibrarySet);
 	}
 
-	public List<StorableInCityLibrary> findByTitle(String title) {
-		List<StorableInCityLibrary> result = new ArrayList<StorableInCityLibrary>();
-		Set<StorableInCityLibrary> cityLibrariySet = cityLibrary.getItemsInCityLibrary().keySet();
-		for (StorableInCityLibrary storable : cityLibrariySet){
+	public List<Publication> findByTitle(String title) {
+		List<Publication> result = new ArrayList<Publication>();
+		Set<Publication> cityLibrariySet = cityLibrary.getItemsInCityLibrary().keySet();
+		for (Publication storable : cityLibrariySet){
 			if (storable.getTitle().equals(title)){
 				result.add(storable);
 			}
@@ -28,7 +28,7 @@ public class CityLibrarianImpl implements Librarian<StorableInCityLibrary> {
 		return result;
 	}
 
-	public List<StorableInCityLibrary> sortByTitle(String title) {
+	public List<Publication> sortByTitle(String title) {
 		// TODO Auto-generated method stub
 		return null;
 	}
