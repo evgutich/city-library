@@ -1,10 +1,15 @@
-package by.htp.city;
+package by.htp.city.librarian;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Set;
 
-public class CityLibrarianImpl implements Librarian<Publication> {
+import by.htp.city.comparator.ByTitleComparator;
+import by.htp.city.entity.library.CityLibrary;
+import by.htp.city.entity.publication.Publication;
+
+public class CityLibrarianImpl implements Librarian {
 	
 	private CityLibrary cityLibrary;
 	
@@ -28,11 +33,13 @@ public class CityLibrarianImpl implements Librarian<Publication> {
 		return result;
 	}
 
-	public List<Publication> sortByTitle(String title) {
-		// TODO Auto-generated method stub
-		return null;
+	public List<Publication> sortByTitle() {
+		Set<Publication> cityLibrariySet = cityLibrary.getItemsInCityLibrary().keySet();
+		List<Publication> publications = new ArrayList<Publication>(cityLibrariySet);
+		Collections.sort(publications, new ByTitleComparator());
+		return publications;
 	}
-	
+
 }
 
 

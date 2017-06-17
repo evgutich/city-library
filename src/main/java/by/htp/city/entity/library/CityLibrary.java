@@ -1,6 +1,8 @@
-package by.htp.city;
+package by.htp.city.entity.library;
 
 import java.util.HashMap;
+
+import by.htp.city.entity.publication.Publication;
 
 public class CityLibrary {
 	private HashMap<Publication, Integer> itemsInCityLibrary;

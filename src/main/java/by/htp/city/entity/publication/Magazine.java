@@ -1,4 +1,4 @@
-package by.htp.city;
+package by.htp.city.entity.publication;
 
 public class Magazine extends Journalism {
 
