@@ -7,9 +7,10 @@ import java.util.Set;
 
 import by.htp.city.comparator.ByTitleComparator;
 import by.htp.city.entity.library.CityLibrary;
+import by.htp.city.entity.publication.Literature;
 import by.htp.city.entity.publication.Publication;
 
-public class CityLibrarianImpl implements Librarian {
+public class CityLibrarianImpl implements LiteratureLibrarian, JournalismLibrarian {
 	
 	private CityLibrary cityLibrary;
 	
@@ -38,6 +39,13 @@ public class CityLibrarianImpl implements Librarian {
 		List<Publication> publications = new ArrayList<Publication>(cityLibrariySet);
 		Collections.sort(publications, new ByTitleComparator());
 		return publications;
+	}
+
+	public List<Literature> sortByAuthorAndTitle() {
+		Set<Publication> cityLibrariySet = cityLibrary.getItemsInCityLibrary().keySet();
+		List<Publication> publications = new ArrayList<Publication>(cityLibrariySet);
+		Collections.sort(publications, new ByTitleComparator());
+		return null;
 	}
 
 }

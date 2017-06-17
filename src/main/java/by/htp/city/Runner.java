@@ -2,8 +2,8 @@ package by.htp.city;
 
 import java.util.List;
 
+import by.htp.city.builder.CityLibrarianBuilder;
 import by.htp.city.entity.publication.Publication;
-import by.htp.city.librarian.CityLibrarianBuilder;
 import by.htp.city.librarian.CityLibrarianImpl;
 
 public class Runner {

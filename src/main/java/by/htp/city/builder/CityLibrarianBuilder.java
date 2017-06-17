@@ -1,4 +1,4 @@
-package by.htp.city.librarian;
+package by.htp.city.builder;
 
 import java.time.LocalDate;
 import java.util.HashMap;
@@ -7,6 +7,7 @@ import by.htp.city.entity.Author;
 import by.htp.city.entity.library.CityLibrary;
 import by.htp.city.entity.publication.Book;
 import by.htp.city.entity.publication.Publication;
+import by.htp.city.librarian.CityLibrarianImpl;
 
 public class CityLibrarianBuilder {
 	public CityLibrarianImpl buildForFindByTitle() {
@@ -39,6 +40,7 @@ public class CityLibrarianBuilder {
 		libraryStock.put(book3, 1);
 		cityLibrary.setItemsInCityLibrary(libraryStock);
 		return new CityLibrarianImpl(cityLibrary);
-
 	}
+	
+	
 }
